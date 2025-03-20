@@ -1,0 +1,66 @@
+html,
+body,
+#root {
+  /*
+  height: 100%;
+  */
+}
+
+html {
+  font-size: 18px;  
+}
+
+h1 {
+  padding: .77rem 0;
+
+  background-color: #010c3f;
+  color: #fff;
+  font-size: 1.88rem;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+h1 .highlight {
+  color: #6c41ec;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.55rem;
+}
+
+.App {
+  /*
+  height: 100%;
+  */
+  padding: 0 17% 10% 17%;
+  
+  background-image: url('./background_photo_desktop.jpg');
+  background-size: cover;
+  background-position: center;
+  /*
+  background-repeat: no-repeat;
+  */
+
+  color: #fff;
+  font-family: 'Work Sans', sans-serif;
+  /*
+  font-weight: 500;
+  */
+}
+
+.AppPlaylist {
+  /*
+  width: 100%;
+  */
+
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 1020px) {
+  .AppPlaylist {
+    flex-direction: column;
+    align-items: center;
+  }
+}
