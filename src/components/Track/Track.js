@@ -13,8 +13,10 @@ function Track(props) {
   return (
     <div className={styles.Track}>
       <div className={styles.TrackInformation}>
-        <h3>track name</h3>
-        <p>track artist or track album </p>
+        <h3>{props.track.name}</h3>
+        <p>
+          {props.track.artist} | {props.track.album}
+        </p>
       </div>
       {renderAction()}
     </div>

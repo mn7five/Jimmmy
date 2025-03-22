@@ -6,7 +6,7 @@ function Playlist(props) {
   return (
     <div className={styles.Playlist}>
       <input defaultValue={"New Playlist"} />
-      <TrackList />
+      <TrackList tracks={[]} />
       <button className={styles.PlaylistSave}>
         SAVE TO SPOTIFY
       </button>
