@@ -6,6 +6,21 @@ import Playlist from "../Playlist/Playlist";
 
 function App() {
   const [searchResults, setSearchResults] = useState([]);
+  const [playlistName, setPlaylistName] = useState("New Playlist");
+  const [playlistTracks, setPlaylistTracks] = useState([
+    {
+      id: "1",
+      name: "name1",
+      artist: "artist1",
+      album: "album1"
+    },
+    {
+      id: "2",
+      name: "name2",
+      artist: "artist2",
+      album: "album2"
+    }
+  ]);
 
   function search(term) {
     setSearchResults([
@@ -51,7 +66,10 @@ function App() {
         <SearchBar onSearch={search} />
         <div className={styles.AppPlaylist}>
           <SearchResults searchResults={searchResults} />
-          <Playlist />
+          <Playlist 
+            playlistName={playlistName}
+            playlistTracks={playlistTracks}
+          />
         </div>        
       </div>
     </div>
