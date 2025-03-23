@@ -2,9 +2,13 @@ import React, { useCallback } from "react";
 import styles from './Track.module.css'
 
 function Track(props) {
+  function addTrack(event) {
+    props.onAdd(props.track);
+  }
+
   function renderAction() {
     return (
-      <button className={styles.TrackAction} >
+      <button className={styles.TrackAction} onClick={addTrack} >
         +
       </button>
     );
