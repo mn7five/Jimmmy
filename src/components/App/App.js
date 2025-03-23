@@ -51,6 +51,10 @@ function App() {
     setPlaylistTracks((prevTracks) => [...prevTracks, track]);
   }
 
+  function removeTrack(track) {
+    setPlaylistTracks((prevTracks) => prevTracks.filter((currentTrack) => currentTrack.id !== track.id));
+  }
+
   return (
     <div>
       <h1>
@@ -63,6 +67,7 @@ function App() {
           <Playlist 
             playlistName={playlistName}
             playlistTracks={playlistTracks}
+            onRemove={removeTrack}
           />
         </div>        
       </div>
